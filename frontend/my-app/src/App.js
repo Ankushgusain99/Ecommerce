@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div>
       {!isAuthenticated ? (
-        <div style={{display:'flex',marginLeft:'150px',marginTop:'100px'}}>
+        <div style={{display:'flex',marginLeft:'300px',marginTop:'100px'}}>
           <Register />
           <div style={{marginLeft:'200px'}}></div>
           <Login setToken={(token) => {
