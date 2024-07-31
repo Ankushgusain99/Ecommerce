@@ -18,21 +18,23 @@ const Login = ({ setToken }) => {
 
   return (
     <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 style={{marginLeft:'50px'}}>Login</h2>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '200px' }}>
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          style={{ padding: '8px', marginBottom: '10px' }}
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          style={{ padding: '8px', marginBottom: '10px' }}
         />
-        <button type="submit">Login</button>
+        <button type="submit" style={{padding:'8px',width:'80px',marginLeft:'50px',color:'black',backgroundColor:'aqua'}}>Login</button>
       </form>
     </div>
   );

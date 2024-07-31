@@ -37,18 +37,19 @@ const App = () => {
   return (
     <div>
       {!isAuthenticated ? (
-        <div>
+        <div style={{display:'flex',marginLeft:'150px',marginTop:'100px'}}>
           <Register />
+          <div style={{marginLeft:'200px'}}></div>
           <Login setToken={(token) => {
             setToken(token);
             localStorage.setItem('token', token);
             setIsAuthenticated(true);
-          }} />
+          }}/>
         </div>
       ) : (
         <div>
-          <button onClick={handleLogout}>Logout</button>
-          <List token={token} />
+          <button style={{padding:'8px',width:'80px',marginLeft:'550px',color:'black',backgroundColor:'aqua'}} onClick={handleLogout}>Logout</button>
+          <div style={{display:'flex'}}>
           <Form token={token} fetchProducts={() => {
             // Function to re-fetch products after creating a new product
             api.get('/products', {
@@ -57,6 +58,10 @@ const App = () => {
             .then(response => setProducts(response.data))
             .catch(error => console.error('Error fetching products', error));
           }} />
+          <List token={token} />
+          
+          </div>
+          
         </div>
       )}
     </div>

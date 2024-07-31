@@ -26,28 +26,31 @@ const Form = ({ token, fetchProducts }) => {
   };
 
   return (
-    <div>
+    <div style={{marginLeft:'300px'}}>
       <h2>Create Product</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '200px' }}>
         <input
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          style={{ padding: '8px', marginBottom: '10px' }}
         />
         <input
           type="number"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+          style={{ padding: '8px', marginBottom: '10px' }}
         />
         <input
           type="text"
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          style={{ padding: '8px', marginBottom: '10px' }}
         />
-        <button type="submit">Create</button>
+        <button type="submit" style={{padding:'8px',width:'80px',marginLeft:'50px',color:'black',backgroundColor:'aqua'}}>Create</button>
       </form>
     </div>
   );
