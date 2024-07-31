@@ -58,7 +58,7 @@ const List = ({ token }) => {
   };
 
   return (
-    <div style={{marginLeft:'150px'}}>
+    <div style={{marginLeft:'300px'}}>
       <h2 style={{marginLeft:'10px'}}>Product List</h2>
       <ul>
         {products.length > 0 ? (

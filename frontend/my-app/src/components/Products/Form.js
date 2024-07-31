@@ -26,7 +26,7 @@ const Form = ({ token, fetchProducts }) => {
   };
 
   return (
-    <div style={{marginLeft:'300px'}}>
+    <div style={{marginLeft:'250px'}}>
       <h2>Create Product</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '200px' }}>
         <input

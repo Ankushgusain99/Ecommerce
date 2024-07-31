@@ -48,7 +48,7 @@ const App = () => {
         </div>
       ) : (
         <div>
-          <button style={{padding:'8px',width:'80px',marginLeft:'550px',color:'black',backgroundColor:'aqua'}} onClick={handleLogout}>Logout</button>
+          <button style={{padding:'8px',width:'80px',marginLeft:'550px',marginTop:'20px',color:'black',backgroundColor:'aqua'}} onClick={handleLogout}>Logout</button>
           <div style={{display:'flex'}}>
           <Form token={token} fetchProducts={() => {
             // Function to re-fetch products after creating a new product
